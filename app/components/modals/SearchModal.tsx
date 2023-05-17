@@ -7,6 +7,7 @@ const searchModal = () => {
         <Modal
             isOpen={searchModal.isOpen}
             onClose={searchModal.onClose}
+            onSubmit={searchModal.onOpen}
         />
     );
 }

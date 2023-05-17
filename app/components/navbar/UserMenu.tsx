@@ -10,6 +10,7 @@ import MenuItem from './MenuItem';
 import useRegisterModal from '../../hooks/useRegisterModule';
 import useLoginModal from '../../hooks/useLoginModal';
 import useListingModal from '@/app/hooks/useListingModal';
+import { useRouter } from 'next/navigation';
 
 interface UserMenuProps {
     currentUser?: SafeUser | null
@@ -21,6 +22,8 @@ const UserMenu: React.FC<UserMenuProps> = ({
     const registerModal = useRegisterModal();
     const listingModal = useListingModal();
     const loginModal = useLoginModal();
+
+    const router = useRouter();
 
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = useCallback(() => {
@@ -60,7 +63,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                         {currentUser ? (
                             <>
                                 <MenuItem
-                                    onClick={() => { }}
+                                    onClick={() => router.push('/account')}
                                     label="My account"
                                 />
                                 <MenuItem
