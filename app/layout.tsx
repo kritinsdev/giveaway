@@ -7,7 +7,7 @@ import LoginModal from './components/modals/LoginModal';
 import getCurrentUser from './actions/getCurrentUser';
 import ListingModal from './components/modals/ListingModal';
 
-const font = Nunito({ subsets: ['latin'] })
+// const font = Nunito({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Giveaway App',
@@ -22,7 +22,7 @@ export default async function RootLayout({
   const currentUser = await getCurrentUser();
   return (
     <html lang="en">
-      <body className={font.className}>
+      <body>
         <ToasterProvider />
         <ListingModal />
         <RegisterModal />
