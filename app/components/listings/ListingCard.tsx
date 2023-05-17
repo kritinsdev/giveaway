@@ -1,15 +1,14 @@
 'use client';
 
 import useCities from "@/app/hooks/useCities";
-import { SafeUser } from "@/app/types";
+import { SafeUser, SafeListing } from "@/app/types";
 
 import Image from "next/image"
-import { Listing } from "@prisma/client";
 import { useRouter } from "next/navigation";
 import { useCallback } from "react";
 
 interface ListingCardProps {
-    data: Listing;
+    data: SafeListing;
     onAction?: (id: string) => void;
     disabled?: boolean;
     actionLabel?: string;
@@ -59,7 +58,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
                     <div className="font-semibold text-lg">
                         {data?.title}
                     </div>
-                    <div className="text-sm text-neutral-400">
+                    <div className="text-sm rounded bg-rose-500 py-1 px-2 text-white">
                         {data.category}
                     </div>
                 </div>
