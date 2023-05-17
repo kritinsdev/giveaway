@@ -55,6 +55,7 @@ const cities = [
 const formattedCities = cities.map((city) => ({
     label: city.name,
     latlng: city.latlng,
+    value: city.value,
 }));
 
 const useCities = () => {

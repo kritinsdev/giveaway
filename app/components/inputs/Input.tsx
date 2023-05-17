@@ -7,7 +7,6 @@ interface InputProps {
     label: string;
     type?: string;
     disabled?: boolean;
-    formatPrice?: boolean;
     required?: boolean;
     register: UseFormRegister<FieldValues>;
     errors: FieldErrors
@@ -18,7 +17,6 @@ const Input: React.FC<InputProps> = ({
     label,
     type = 'text',
     disabled,
-    formatPrice,
     required,
     register,
     errors
@@ -33,7 +31,6 @@ const Input: React.FC<InputProps> = ({
                 type={type}
                 className={`
                 peer
-                w-full
                 p-4
                 pt-6
                 font-light
@@ -44,6 +41,7 @@ const Input: React.FC<InputProps> = ({
                 transition
                 disabled:opacity-70
                 disabled:cursor-not-allowed
+                w-full
                 ${errors[id] ? 'border-rose-500' : 'border-neutral-300'}
                 ${errors[id] ? 'focus:border-rose-500' : 'focus:border-black'}
                 `}
