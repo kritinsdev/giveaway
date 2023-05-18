@@ -2,58 +2,71 @@
 
 import Container from "../Container";
 import CategoryBox from "../CategoryBox";
-import { TbCherry } from 'react-icons/tb';
+import { TbFridge, TbPlant, TbMoodKid, TbQuestionMark, TbDog } from 'react-icons/tb';
+import { GiClothes, GiBroom } from 'react-icons/gi';
+import { MdDesk, MdSportsTennis, MdTabletMac } from 'react-icons/md';
+import { BsTools, BsBalloon } from 'react-icons/bs';
 import { usePathname, useSearchParams } from "next/navigation";
 
 export const categories = [
     {
-        label: 'Computers',
-        icon: TbCherry,
+        label: 'Sadzīves tehnika',
+        icon: TbFridge,
         description: 'Some lorem description'
     },
     {
-        label: 'Clothing',
-        icon: TbCherry,
+        label: 'Apģērbs',
+        icon: GiClothes,
         description: 'Some lorem description'
     },
     {
-        label: 'House Appliances',
-        icon: TbCherry,
+        label: 'Mēbeles',
+        icon: MdDesk,
         description: 'Some lorem description'
     },
     {
-        label: 'Furniture',
-        icon: TbCherry,
+        label: 'Dārzam',
+        icon: TbPlant,
         description: 'Some lorem description'
     },
     {
-        label: 'Shoes',
-        icon: TbCherry,
+        label: 'Bērniem',
+        icon: TbMoodKid,
         description: 'Some lorem description'
     },
     {
-        label: 'Electronics',
-        icon: TbCherry,
+        label: 'Elektronika',
+        icon: MdTabletMac,
         description: 'Some lorem description'
     },
     {
-        label: 'Other',
-        icon: TbCherry,
+        label: 'Sports',
+        icon: MdSportsTennis,
         description: 'Some lorem description'
     },
     {
-        label: 'Beauty',
-        icon: TbCherry,
+        label: 'Dzīvnieki',
+        icon: TbDog,
         description: 'Some lorem description'
     },
     {
-        label: 'Construction',
-        icon: TbCherry,
+        label: 'Darbarīki',
+        icon: BsTools,
         description: 'Some lorem description'
     },
     {
-        label: 'Tools',
-        icon: TbCherry,
+        label: 'Mājsaimniecība',
+        icon: GiBroom,
+        description: 'Some lorem description'
+    },
+    {
+        label: 'Atpūta',
+        icon: BsBalloon,
+        description: 'Some lorem description'
+    },
+    {
+        label: 'Cits',
+        icon: TbQuestionMark,
         description: 'Some lorem description'
     },
 ]
