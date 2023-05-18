@@ -58,7 +58,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
                     <div className="font-semibold text-lg">
                         {data?.title}
                     </div>
-                    <div className="text-sm rounded bg-rose-500 py-1 px-2 text-white">
+                    <div className="text-sm rounded bg-sky-500 py-1 px-2 text-white">
                         {data.category}
                     </div>
                 </div>
